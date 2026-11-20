@@ -55,9 +55,6 @@
             "Composer\\Config::disableProcessTimeout",
             "@php artisan dev"
         ],
-        "lint": [
-            "pint --parallel"
-        ],
         "lint:check": [
             "pint --parallel --test"
         ],
@@ -94,7 +91,14 @@
         ],
         "pre-package-uninstall": [
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
-        ]
+        ],
+        "lint": "pint --test",
+        "analyse": "phpstan analyse",
+        "verify": [
+            "@lint",
+            "@analyse",
+            "@php artisan test"
+    ]
     },
     "extra": {
         "laravel": {
