@@ -93,7 +93,7 @@
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
         ],
         "lint": "pint --test",
-        "analyse": "phpstan analyse",
+        "analyse": "phpstan analyse app",
         "verify": [
             "@lint",
             "@analyse",
